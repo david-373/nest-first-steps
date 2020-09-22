@@ -1,14 +1,12 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class FirstSteps {
+export class Todo {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column("text")
     title: string;
-
-
 
     @Column({ default: false })
     isCompleted: boolean;
